@@ -6,15 +6,17 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d docs",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "gh-pages": "^4.0.0",
+    "query-string": "^7.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
     "rooks": "^5.14.0",
     "standard": "^17.0.0"
   },
@@ -22,12 +24,15 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
+    "eslint": "^8.20.0",
+    "eslint-plugin-react": "^7.30.1",
     "vite": "^3.0.0"
   },
   "eslintConfig": {
     "extends": [
       "standard",
-      "react-app"
+      "eslint:recommended",
+      "plugin:react/recommended"
     ]
   }
 }
