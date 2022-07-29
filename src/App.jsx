@@ -19,6 +19,7 @@ const App = () => {
         }
 
       </Routes>
+      <footer style={{ textAlign: 'center' }}>Made with ❤️ by <a href="https://github.com/itskreisler" target="_blank" rel="noreferrer">itskreisler</a></footer>
       </main>
     </Router>
   )
