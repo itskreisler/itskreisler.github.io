@@ -232,7 +232,7 @@ $dp-hides-width: 720px;
   }
   .hex-container.icon {
     span {
-      background: url('./social-icons.png');
+      background: url('/social-icons.png');
       width: 50px;
       height: 50px;
       display: block;
@@ -244,17 +244,17 @@ $dp-hides-width: 720px;
         display: none;
       }
       .hex {
-        background: url('./img/profile-128.png');
+        background: url('/img/profile-128.png');
         background-size: 108%;
         background-position: 50%;
 
         &:after {
-          background: url('./img/profile-128-min-60deg.png');
+          background: url('/img/profile-128-min-60deg.png');
           background-position: 50%;
           background-size: 150%;
         }
         &:before {
-          background: url('./img/profile-128-60deg.png');
+          background: url('/img/profile-128-60deg.png');
           background-position: 50%;
           background-size: 150%;
         }
