@@ -1,0 +1,12 @@
+// TODO: Estilos
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+img {
+  max-width: 100%;
+  &.object-fit-cover {
+    object-fit: cover;
+  }
+}
+.clip-path-circle {
+  clip-path: circle(50% at 50% 50%);
+}

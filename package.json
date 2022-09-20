@@ -12,17 +12,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.2.1",
     "gh-pages": "^4.0.0",
+    "jquery": "^3.6.1",
+    "node-sass": "^7.0.3",
+    "prop-types": "^15.8.1",
     "query-string": "^7.1.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.36.0",
     "react-router-dom": "^6.3.0",
+    "react-use": "^17.4.0",
     "rooks": "^5.14.0",
+    "sass": "^1.54.9",
     "standard": "^17.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
     "eslint": "^8.20.0",
     "eslint-plugin-react": "^7.30.1",

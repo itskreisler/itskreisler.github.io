@@ -6,12 +6,12 @@ import {
 } from 'react-router-dom'
 import Menu from './components/Menu'
 import { appPages } from './pages/urls'
-
+import './custom.scss'
 const App = () => {
   return (
     <Router>
-      <main className="container-fluid">
-      <Menu />
+      <main>
+      {/* <Menu /> */}
       <Routes>
         {appPages.map(({ url, Component }, index) => (
           <Route key={index} path={url} exact={true} element={<Component />} />
@@ -19,7 +19,7 @@ const App = () => {
         }
 
       </Routes>
-      <footer style={{ textAlign: 'center' }}>Made with ❤️ by <a href="https://github.com/itskreisler" target="_blank" rel="noreferrer">itskreisler</a></footer>
+
       </main>
     </Router>
   )
