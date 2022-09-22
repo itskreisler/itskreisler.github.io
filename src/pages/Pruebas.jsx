@@ -1,19 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useActive } from '../hooks/use-active'
-import { useNewDate } from '../hooks/use-new-date'
+import { useClock, useDiffDate } from '../hooks/use-new-date'
 import Canvas from './Canvas'
 
 const Pruebas = () => {
   const [active, time] = useActive(5000)
-  const [locale] = useNewDate()
+  const [locale] = useClock()
+
+  const handleEnviar = () => {
+    (async () => {
+
+    })()
+  }
   return (
     <>
       <div className="grid">
         <div>
-          Estas {!active && 'in'}activo {time}
+          Estas {!active && 'in'}activo.
+          <p>{time}</p>
           <p>
-<input type="text" />
+            <button onClick={handleEnviar}>Enviar</button>
           </p>
+          {useDiffDate(new Date('2022-09-22'), new Date('2022-09-12'))}
           <pre>
             {JSON.stringify(
               {

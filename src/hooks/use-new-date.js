@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-const useNewDate = () => {
+const useClock = () => {
   const [hora, setHora] = useState(new Date())
   useEffect(() => {
     setInterval(() => {
@@ -8,5 +8,6 @@ const useNewDate = () => {
   }, [])
   return [hora]
 }
-
-export { useNewDate }
+const useDate = (date) => new Date(date)
+const useDiffDate = (uno, dos) => Math.ceil(Math.abs(uno - dos) / 86400000)
+export { useClock, useDiffDate, useDate }

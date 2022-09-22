@@ -12,7 +12,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
+    "cheerio": "^1.0.0-rc.12",
     "gh-pages": "^4.0.0",
     "jquery": "^3.6.1",
     "node-sass": "^7.0.3",

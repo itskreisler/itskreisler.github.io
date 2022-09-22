@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react'
-import { useLocation, useNavigate, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useTitle } from 'react-use'
+import { useCurrentPath } from '../hooks/use-current-path'
+import { useRouter } from '../hooks/use-router'
 import { appPages } from '../pages/urls'
 
 const Menu = () => {
-  const { pathname } = useLocation()
-  const navigateTo = useNavigate()
-  const temp = appPages.find(({ url, title }) => url === pathname && { title })
+  const { location, pathname, push } = useRouter()
+
+  const temp = appPages.find(
+    ({ url, title }) => useCurrentPath(url, location) && { title }
+  )
+  useTitle(`Le jaim | ${temp?.title}`)
   useEffect(() => {
-    !temp && navigateTo('/')
-    document.title = temp?.title
+    !temp && push('/')
   }, [temp])
   return (
     <nav>
