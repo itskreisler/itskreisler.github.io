@@ -1,37 +1,23 @@
 import React from 'react'
-import { useActive } from '../hooks/use-active'
-import { useClock, useDiffDate } from '../hooks/use-new-date'
+import { useAppContext } from '../context/AppContext'
 import Canvas from './Canvas'
 
 const Pruebas = () => {
-  const [active, time] = useActive(5000)
-  const [locale] = useClock()
+  const { lang, locales, setLoadLocales } = useAppContext()
 
-  const handleEnviar = () => {
-    (async () => {
-
-    })()
-  }
   return (
     <>
       <div className="grid">
         <div>
-          Estas {!active && 'in'}activo.
-          <p>{time}</p>
           <p>
-            <button onClick={handleEnviar}>Enviar</button>
+            <select value={lang} onChange={({ target }) => setLoadLocales(target.value) }>
+              <option value="es">Español</option>
+              <option value="en">Ingles</option>
+            </select>
           </p>
-          {useDiffDate(new Date('2022-09-22'), new Date('2022-09-12'))}
+          <pre>{JSON.stringify(locales, null, 2)}</pre>
           <pre>
-            {JSON.stringify(
-              {
-                fecha: locale.toLocaleDateString(),
-                hora: locale.toLocaleTimeString(),
-                fecha_hora: locale.toLocaleString()
-              },
-              null,
-              2
-            )}
+
           </pre>
         </div>
       </div>

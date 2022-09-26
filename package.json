@@ -24,6 +24,7 @@
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.36.0",
+    "react-platform-js": "^0.0.1",
     "react-router-dom": "^6.3.0",
     "react-use": "^17.4.0",
     "rooks": "^5.14.0",

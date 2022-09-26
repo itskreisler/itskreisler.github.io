@@ -7,9 +7,11 @@ import {
 import Menu from './components/Menu'
 import { appPages } from './pages/urls'
 import './custom.scss'
+import { TagAppContext } from './context/AppContext'
 const App = () => {
   return (
     <Router>
+      <TagAppContext>
       <main>
       {/* <Menu /> */}
       <Routes>
@@ -21,6 +23,7 @@ const App = () => {
       </Routes>
 
       </main>
+      </TagAppContext>
     </Router>
   )
 }

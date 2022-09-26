@@ -1,22 +1,25 @@
 import PropTypes from 'prop-types'
-import React, { useContext, createContext } from 'react'
+import React, { createContext, useContext } from 'react'
+import { useLang } from './useLang'
 
 const AppContext = createContext({
-  myApp: { }
 })
 
-export const TagAppContext = ({ children }) => {
+export const TagAppContext = ({ children, hashKey }) => {
+  const language = useLang()
   return (
     <AppContext.Provider
-      value={{
-        myApp: { }
-      }}
+      value={ language }
     >
       {children}
     </AppContext.Provider>
   )
 }
 TagAppContext.propTypes = {
-  children: PropTypes
+  children: PropTypes.node.isRequired,
+  hashKey: PropTypes.number
+}
+TagAppContext.defaultProps = {
+  hashKey: null
 }
 export const useAppContext = () => useContext(AppContext)
