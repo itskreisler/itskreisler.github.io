@@ -14,28 +14,27 @@ import { useScript } from '../hooks/use-script'
  * @param {String} align - Alineación de texto personalizado (izquierda, derecha). Example: holder.js/300x200?align=left
  * @param {String} outline - Dibuje el esquema y las diagonales para el marcador de posición. Example: holder.js/300x200?outline=yes
  * @param {String} lineWrap - Relación de longitud de línea máxima a ancho de imagen. Example: holder.js/300x200?lineWrap=0.5
- * @returns
+ * @return {Array} ref,img,status
  */
-const useHolder = ({ dimensions, ...props }) => {
+export const useHolder = ({ dimensions, ...props }) => {
   // const { dimensions } = options
   const keys = Object.keys(props)
   const values = Object.values(props)
   const query = keys.map((key, index) => `${key}=${values[index]}`).join('&')
-  const status = useScript('./holder.min.js')
+  // './holder.min.js'
+  const status = useScript('https://unpkg.com/holderjs@latest/holder.min.js')
   const placeholder = `holder.js/${dimensions}?${query}`
   const myImage = useRef()
   useEffect(() => {
     status === 'ready' &&
-        (() => {
-          !(typeof Holder === 'undefined') &&
-            // TODO: Holder no funciona con npm
-            // eslint-disable-next-line no-undef
-            myImage.current && Holder.run({
+      (() => {
+        !(typeof Holder === 'undefined') &&
+          // TODO: Holder no funciona con npm
+          // eslint-disable-next-line no-undef
+          myImage.current && Holder.run({
             images: myImage.current
           })
-        })()
+      })()
   }, [status])
-  return [placeholder, myImage, status]
+  return [myImage, placeholder, status]
 }
-
-export { useHolder }

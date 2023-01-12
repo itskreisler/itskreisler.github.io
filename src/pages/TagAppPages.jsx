@@ -1,14 +1,20 @@
 import React from 'react'
+import {
+
+  Route
+
+} from 'react-router-dom'
 import Home from '@/pages/Home.jsx'
 import Proyectos from '@/pages/Proyectos'
 import Pruebas from '@/pages/Pruebas'
-const pathTitle = ([path, title]) => { return { path, title } }
-const PATHS = {
+import PageTest from './PageTest'
+export const pathTitle = ([path, title]) => { return { path, title } }
+export const PATHS = {
   URL_DEFAULT: pathTitle(['/', 'Inicio']),
   URL_H: pathTitle(['/proyectos', 'Proyectos']),
   URL_P: pathTitle(['/pruebas', 'Pruebas'])
 }
-const appPages = [
+export const appPages = [
   {
     title: PATHS.URL_DEFAULT.title,
     url: PATHS.URL_DEFAULT.path,
@@ -22,7 +28,14 @@ const appPages = [
   {
     title: PATHS.URL_P.title,
     url: PATHS.URL_P.path,
-    Component: () => <Pruebas/>
+    Component: () => <PageTest/>
   }
 ]
-export { appPages, PATHS }
+
+const tagAppPages = () => {
+  return appPages.map(({ url, Component }, index) => (
+    <Route key={index} path={url} exact={true} element={<Component />} />
+  ))
+}
+
+export default tagAppPages

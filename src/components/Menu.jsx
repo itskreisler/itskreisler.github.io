@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTitle } from 'react-use'
 import { useCurrentPath } from '../hooks/use-current-path'
 import { useRouter } from '../hooks/use-router'
-import { appPages } from '../pages/urls'
+import { appPages } from '../pages/TagAppPages'
 
 const Menu = () => {
   const { location, pathname, push } = useRouter()

@@ -12,14 +12,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.2.2",
     "bootstrap": "^5.2.1",
-    "cheerio": "^1.0.0-rc.12",
-    "gh-pages": "^4.0.0",
     "jquery": "^3.6.1",
-    "node-sass": "^7.0.3",
+    "node-sass": "^8.0.0",
     "prop-types": "^15.8.1",
-    "query-string": "^7.1.1",
+    "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
@@ -27,15 +25,17 @@
     "react-platform-js": "^0.0.1",
     "react-router-dom": "^6.3.0",
     "react-use": "^17.4.0",
-    "rooks": "^5.14.0",
-    "sass": "^1.54.9",
+    "rooks": "^7.4.3",
     "standard": "^17.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^2.0.0",
+    "@vitejs/plugin-react": "^3.0.1",
     "eslint": "^8.20.0",
     "eslint-plugin-react": "^7.30.1",
-    "vite": "^3.0.0"
+    "gh-pages": "^4.0.0",
+    "sass": "^1.57.1",
+    "vite": "^4.0.4",
+    "vite-plugin-pwa": "^0.14.1"
   },
   "eslintConfig": {
     "extends": [

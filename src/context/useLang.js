@@ -5,7 +5,7 @@ const useLang = (hashKey = null) => {
   const [lang, setLang] = useLocalStorage('lang', undefined)
   const [locales, setLocales] = useLocalStorage('locales', undefined)
   const loadLocales = (fetchLang) => (
-    fetch(`${process.env.PUBLIC_URL || import.meta.env.BASE_URL}locales/${fetchLang}.json${hashKey ? `?hashKey=${hashKey}` : ''}`)
+    globalThis.fetch(`${process.env.PUBLIC_URL || import.meta.env.BASE_URL}locales/${fetchLang}.json${hashKey ? `?hashKey=${hashKey}` : ''}`)
       .then((raw) => raw.json())
       .then((newLocales) => setLocales({
         data: newLocales,
