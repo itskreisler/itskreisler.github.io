@@ -11,7 +11,7 @@ const Menu = () => {
   const temp = appPages.find(
     ({ url, title }) => useCurrentPath(url, location) && { title }
   )
-  useTitle(`Le jaim | ${temp?.title}`)
+  useTitle(`Kreisler | ${temp?.title}`)
   useEffect(() => {
     !temp && push('/')
   }, [temp])

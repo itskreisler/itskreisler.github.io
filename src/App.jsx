@@ -1,6 +1,5 @@
 import React from 'react'
 import { HashRouter as Router, Routes } from 'react-router-dom'
-
 import './custom.scss'
 import { TagAppContext } from './context/AppContext'
 import tagAppPages from './pages/TagAppPages'
@@ -10,7 +9,7 @@ const App = () => {
     <Router>
       <TagAppContext>
         <main>
-          <Menu />
+          {/* <Menu /> */}
           <Routes>{tagAppPages()}</Routes>
         </main>
       </TagAppContext>
