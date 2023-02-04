@@ -1,6 +1,6 @@
 {
   "name": "Kreisler",
-  "id": "https://itskreisler.github.io/itskreisler/",
+  "id": "https://itskreisler.github.io/",
   "scope": "/",
   "start_url": "/",
   "display": "fullscreen",
@@ -9,9 +9,9 @@
   "description": "description",
   "icons": [
     {
-      "src": "/icon.png",
+      "src": "/favicon/android-icon-192x192.png",
       "type": "image/png",
-      "sizes": "512x512",
+      "sizes": "192x192",
       "purpose": "any"
     }
   ]
