@@ -9,7 +9,7 @@ const App = () => {
     <Router>
       <TagAppContext>
         <main>
-          <Menu />
+          {/* <Menu /> */}
           <Routes>{tagAppPages()}</Routes>
         </main>
       </TagAppContext>
