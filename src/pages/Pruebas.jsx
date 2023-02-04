@@ -1,6 +1,5 @@
 import React from 'react'
 import { useAppContext } from '../context/AppContext'
-import Canvas from './Canvas'
 
 const Pruebas = () => {
   const { lang, locales, setLoadLocales } = useAppContext()
@@ -23,13 +22,7 @@ const Pruebas = () => {
       </div>
       <div className="grid">
         <div>
-          <Canvas
-            style={{
-              border: '1px solid #d3d3d3'
-            }}
-            width="100"
-            height="100"
-          />
+
         </div>
       </div>
     </>

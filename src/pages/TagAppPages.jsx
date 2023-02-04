@@ -12,7 +12,8 @@ export const pathTitle = ([path, title]) => { return { path, title } }
 export const PATHS = {
   URL_DEFAULT: pathTitle(['/', 'Inicio']),
   URL_H: pathTitle(['/proyectos', 'Proyectos']),
-  URL_P: pathTitle(['/pruebas', 'Pruebas'])
+  URL_P: pathTitle(['/pruebas', 'Pruebas']),
+  URL_P_TEST: pathTitle(['/page-test', 'Pagina Test'])
 }
 export const appPages = [
   {
@@ -28,6 +29,11 @@ export const appPages = [
   {
     title: PATHS.URL_P.title,
     url: PATHS.URL_P.path,
+    Component: () => <Pruebas/>
+  },
+  {
+    title: PATHS.URL_P_TEST.title,
+    url: PATHS.URL_P_TEST.path,
     Component: () => <PageTest/>
   }
 ]

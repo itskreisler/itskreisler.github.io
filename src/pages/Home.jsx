@@ -51,7 +51,7 @@ const Home = () => {
                 ? hexval[level][hexval.count[level]++]
                 : ''
               // console.log(level)
-              return `${mem2}<${val ? 'a' : 'div'} class="hex-container level-${level} ${val ? `icon ${val[0]}` : ''}" ${val ? 'target="_blank"' : ''} ${val ? `href="${val[1]}"` : ''}><div class="hex-border"><div class="hex"><span></span></div></div></${val ? 'a' : 'div'}>`
+              return `${mem2}<${val ? 'a' : 'div'} class="hex-container level-${level} ${val ? `icon ${val[0]}` : ''}" ${val ? 'target="_blank" rel="noopener"' : ''} ${val ? `href="${val[1]}"` : ''}><div class="hex-border"><div class="hex"><span></span></div></div></${val ? 'a' : 'div'}>`
             }, '')
           return `${mem}<div class="line">${hex}</div>`
         }, '')

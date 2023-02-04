@@ -7,7 +7,7 @@ import path from 'path'
 export default ({ mode }) => {
   // Load app-level env vars to node-level env vars.
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) }
-  // const base = typeof process.env.npm_config_mode === 'undefined' ? '/lejaim-demo/' : './'
+  // const base = typeof process.env.npm_config_mode === 'undefined' ? '/repo/' : './'
   return defineConfig({
     plugins: [react(), VitePWA({ registerType: 'autoUpdate', manifest: false })],
     build: {
