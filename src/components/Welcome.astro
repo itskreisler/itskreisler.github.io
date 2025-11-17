@@ -1,19 +1,6 @@
 ---
-// Componente Hero con Tailwind CSS
+// Portfolio completo con shadcn/ui
+import Portfolio from './Portfolio';
 ---
 
-<body>
-	<header>header</header>
-	<main>main</main>
-	<footer>footer</footer>
-</body>
-
-<style>
-	@reference "@src/styles/global.css";
-	body {
-		@apply grid min-h-dvh grid-rows-[auto_1fr_auto];
-	}
-	main {
-		@apply flex items-center justify-center;
-	}
-</style>
+<Portfolio client:load />

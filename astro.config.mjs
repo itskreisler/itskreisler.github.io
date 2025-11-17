@@ -3,18 +3,23 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 
 
+import react from '@astrojs/react';
+
+
 // https://astro.build/config
 export default defineConfig({
-    vite: {
-        plugins: [tailwindcss()],
-        build: {
-            rollupOptions: {
-                output: {
-                    entryFileNames: 'assets/js/[name].js',
-                    assetFileNames: 'assets/css/[name].css'
-                }
-            }
-        }
+  vite: {
+      plugins: [tailwindcss()],
+      build: {
+          rollupOptions: {
+              output: {
+                  entryFileNames: 'assets/js/[name].js',
+                  assetFileNames: 'assets/css/[name].css'
+              }
+          }
+      }
 
-    },
+  },
+
+  integrations: [react()],
 });
